@@ -1,6 +1,7 @@
 package com.android.tv.settings.testcirclelayoutmenu;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -30,27 +31,19 @@ public class CircleActivity extends Activity
 
 		mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
 		mCircleMenuLayout.setMenuItemIconsAndTexts(mItemImgs, mItemTexts);
-		
-		
 
-		mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener()
-		{
-			
+
+
+		mCircleMenuLayout.setOnMenuItemClickListener(new CircleMenuLayout.OnMenuItemClickListener() {
 			@Override
-			public void itemClick(View view, int pos)
-			{
-				Toast.makeText(CircleActivity.this, mItemTexts[pos],
-						Toast.LENGTH_SHORT).show();
-
+			public void itemClick(View view, int position) {
+				Toast.makeText( CircleActivity.this,mItemTexts[position],Toast.LENGTH_SHORT).show();
 			}
-			
+
 			@Override
-			public void itemCenterClick(View view)
-			{
-				Toast.makeText(CircleActivity.this,
-						"you can do something just like ccb  ",
-						Toast.LENGTH_SHORT).show();
-				
+			public void itemCenterClick(View view) {
+				Intent intent =new Intent(CircleActivity.this,SecondActivity.class);
+				startActivity(intent);
 			}
 		});
 		
