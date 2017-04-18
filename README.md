@@ -8,8 +8,8 @@
 使用方法
 ---
 
-- 1.首先导入第三方框架library_circle_layout，添加依赖
-- 2.在布局文件中添加自定义的圆形布局，如下所示：
+##### 1.首先导入第三方框架library_circle_layout，添加依赖
+##### 2.在布局文件中添加自定义的圆形布局，如下所示：
 ```
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -42,8 +42,7 @@
 </LinearLayout>
 ```
 - 注：其中id_circle_menu_item_center的id不能改变，因为·在第三方框架中有引用，在values中的ids.xml中有定义。
-
-- 3 .在代码中使用时：
+##### 3 .在代码中使用时：
 - (1)首先要绑定CircleMenuLayout的id
 - (2)准备转盘中的图片数据和文字标题,如下：
 ```
